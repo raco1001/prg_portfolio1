@@ -78,12 +78,21 @@ class ASCII {
 }
 
 
+function showDeveloperTitle() {
+    const developerTitle = document.querySelector("header h1:nth-of-type(3)");
+    setTimeout(() => {
+        developerTitle.style.visibility = "visible"; 
+    }, 300);
+}
+
+
 function startAsciiAnimation() {
     const animationInterval = setInterval(() => {
         if (isConnected) {
             clearInterval(animationInterval); 
             dynamicAnimationElement.textContent = `${animationText}`;
-            connectionStatusElement.textContent = "Connected!"; 
+            connectionStatusElement.textContent = "Connected!";
+            showDeveloperTitle(); 
             return;
         }
 
@@ -123,7 +132,9 @@ function generateASCII(size) {
 document.addEventListener('scroll', (event) => {
     let scrollY = window.scrollY;
     const maxScroll = 200;
+    const scrollThreshold = 300;
 
+    
     if (!isConnected) {
         isConnected = true; 
     }
@@ -149,10 +160,14 @@ document.addEventListener('scroll', (event) => {
 
     lastScrollY = scrollY;
 
-    const textLength = Math.min(
-      Math.floor((scrollY / maxScroll) * fullText.length) + 3, 
-      fullText.length
-  );
+        if (scrollY > scrollThreshold) {
+        const textLength = Math.min(
+            Math.floor(((scrollY - scrollThreshold) / maxScroll) * fullText.length),
+            fullText.length
+        );
+
+        dynamicTextElement.innerHTML = fullText.slice(0, textLength) + '_';
+    }
 
   dynamicTextElement.innerHTML = fullText.slice(0, textLength) + '_';
 });

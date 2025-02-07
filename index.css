@@ -46,6 +46,12 @@ header {
   
 }
 
+header h1:nth-of-type(3) {
+  visibility: hidden; 
+  transition: visibility 0.3s ease; 
+}
+
+
 h1 {
   color: #049b04;
   font-size: 28px;
