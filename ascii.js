@@ -81,16 +81,16 @@ class ASCII {
 function startAsciiAnimation() {
     const animationInterval = setInterval(() => {
         if (isConnected) {
-            clearInterval(animationInterval); // 스크롤 발생 시 애니메이션 중지
+            clearInterval(animationInterval); 
             dynamicAnimationElement.textContent = `${animationText}`;
-            connectionStatusElement.textContent = "Connected!"; // 메시지 추가
+            connectionStatusElement.textContent = "Connected!"; 
             return;
         }
-        // 애니메이션 업데이트
+
         dynamicAnimationElement.textContent =
             animationText + animationSymbols[animationIndex];
-        animationIndex = (animationIndex + 1) % animationSymbols.length; // 심볼 순환
-    }, 200); // 200ms마다 업데이트
+        animationIndex = (animationIndex + 1) % animationSymbols.length; 
+    }, 200); 
 }
 
 let ascii = null;
