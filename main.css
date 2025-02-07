@@ -25,6 +25,22 @@ header {
   margin-bottom: 20px;
 }
 
+#dynamic-animation {
+  font-size: 24px;
+  color: #049b04;
+  text-align: left;
+  white-space: nowrap;
+  margin-bottom: 10px; 
+}
+
+#dynamic-text {
+  color: #049b04;
+  text-align: left;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+
 #ascii-image {
   margin: 20px 0;
   
@@ -76,6 +92,25 @@ section {
   background-color: #222;
 }
 
+#about {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #222;
+}
+
+.about-category {
+  margin-bottom: 30px; 
+}
+
+.about-category h3 {
+  color: #049b04; 
+  font-size: 20px;
+  text-align: left; 
+  margin-bottom: 10px; 
+}
+
 
 #skills {
   margin-top: 20px;
@@ -90,7 +125,7 @@ section {
 }
 
 .skill-category h3 {
-  color: #00ff00; 
+  color: #049b04; 
   font-size: 20px;
   text-align: left; 
   margin-bottom: 10px; 
@@ -129,6 +164,9 @@ section {
 
 
 
+
+
+
 #certifications {
   margin-top: 20px;
   padding: 20px;
@@ -142,8 +180,78 @@ section {
 }
 
 .certification-category h3 {
-  color: #00ff00; 
+  color: #049b04; 
   font-size: 20px;
   text-align: left; 
   margin-bottom: 10px; 
+}
+
+.certification-category ul {
+  list-style: none; 
+  padding: 0;
+  display: flex; 
+  gap: 20px; 
+}
+
+.certification-category ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.archiving-category {
+  margin-bottom: 30px; 
+}
+
+.archiving-category h3{
+  color: #049b04; 
+  font-size: 20px;
+  text-align: left; 
+  margin-bottom: 10px; 
+}
+
+.archiving-category p {
+  color: #049b04; 
+  font-size: 20px;
+  text-align: left;
+  margin-left: 20px; 
+  margin-bottom: 15px; 
+  font-weight: 1000;
+}
+
+
+.archiving-category ul {
+  list-style: none; 
+  padding: 0;
+  display: flex; 
+  gap: 20px; 
+}
+
+.archiving-category ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.archiving-category ul li img {
+  width: 48px; 
+  height: 48px; 
+  border-radius: 8px; 
+  border: 2px solid #5f5f5f; 
+  display: block;
+  background-color: #fcfbfb; 
+  padding: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+  transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+
+.archiving-category ul li img:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.7); 
 }

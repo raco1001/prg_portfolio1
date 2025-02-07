@@ -5,12 +5,19 @@ let maxSize = 12;
 let minSize = 5; 
 let minSizeReached = false; 
 let lastScrollY = window.scrollY; 
+
+const dynamicAnimationElement = document.getElementById('dynamic-animation');
+const connectionStatusElement = document.getElementById('connection-status');
+let isConnected = false; 
+let animationIndex = 0; 
+const animationText = "Connecting to Programmers_WebFullCycleDevCourse_Portfolio ";
+const animationSymbols = ['/', '-', '\\', '|'];
+
+
+
 const dynamicTextElement = document.getElementById('dynamic-text');
 const fullText = `~$ 서비스의 모든 소리를 듣고 싶은 개발자입니다. \\ <br>아키텍처에 포함된 요소들을 조화롭게 운영하는 것을 매우 중요하게 생각합니다.`;
 
-
-
-// Cell class
 class Cell {
     constructor(x, y, symbol, color) {
         this.x = x;
@@ -71,6 +78,21 @@ class ASCII {
 }
 
 
+function startAsciiAnimation() {
+    const animationInterval = setInterval(() => {
+        if (isConnected) {
+            clearInterval(animationInterval); // 스크롤 발생 시 애니메이션 중지
+            dynamicAnimationElement.textContent = `${animationText}`;
+            connectionStatusElement.textContent = "Connected!"; // 메시지 추가
+            return;
+        }
+        // 애니메이션 업데이트
+        dynamicAnimationElement.textContent =
+            animationText + animationSymbols[animationIndex];
+        animationIndex = (animationIndex + 1) % animationSymbols.length; // 심볼 순환
+    }, 200); // 200ms마다 업데이트
+}
+
 let ascii = null;
 
 
@@ -101,6 +123,11 @@ function generateASCII(size) {
 document.addEventListener('scroll', (event) => {
     let scrollY = window.scrollY;
     const maxScroll = 200;
+
+    if (!isConnected) {
+        isConnected = true; 
+    }
+
 
     if (!minSizeReached && scrollY > lastScrollY) {
 
@@ -138,6 +165,6 @@ document.addEventListener('scroll', (event) => {
     }
 });
 
-
+startAsciiAnimation();
 const initialImagePath = './img/portfolio.jpg';
 loadImage(initialImagePath);

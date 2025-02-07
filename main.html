@@ -1,118 +1,173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - ASCII Art</title>
-    <link rel="stylesheet" href="./main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />      
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>김종현@Full-Stack-Developer</h1>
-            <div id="ascii-image">
-                <canvas id="canvas"></canvas>
-            </div>
-            <h2 id="dynamic-text">$ _</h2>
-        </header>
-        <main>
-            <section>
-                <h2>~$ About Me</h2>
-                <p>이름: 김종현 </p>
-            </section>
-            <section id="skills">
-              <h2>~$ Skill</h2>
-              <div class="skill-category">
-                <h3>Frontend</h3>
-                <ul>
-                  <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-                   </li>
-                  <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" />
-                   </li>
-                  <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
-                   </li>
-                </ul>
-              </div>
-              <div class="skill-category">
-                <h3>Backend</h3>
-                <p>아직!!</p>
-              </div>
-              <div class="skill-category">
-                <h3>Database</h3>
-                <ul>
-                  <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" />
-                   </li>
-                  <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" />
-                   </li>
-                  <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
-                   </li>
-                   <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original-wordmark.svg" />
-                   </li>
-                  <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" />
-                   </li>
-                </ul>
-              </div>
-              <div class="skill-category">
-                <h3>Deployment</h3>
-                <ul>
-                  <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" />
-                   </li>
-                  <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" />
-                  </li>
-                </ul>
-              </div>
-              <div class="skill-category">
-                <h3>Monitoring</h3>
-                <ul>
-                  <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original.svg" />
-                  </li>
-                  <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original-wordmark.svg" />
-                   </li>
-                  <li>
-                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original-wordmark.svg" />
-                   </li>
-                </ul>
-              </div>
-              <div class="skill-category">
-                <h3>OS</h3>
-                <ul>
-                  <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original-wordmark.svg" />
-                  </li>
-                  <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redhat/redhat-original-wordmark.svg" />
-                   </li>
-                </ul>
-              </div>
-            </section>
-            <section id ="certifications">
-              <h2>~$ Certification</h2>
-                <div class="certification-category">
-                  <ul>
-                    <h3>리눅스 마스터 2 급</h3>
-                    <h3>SQLD</h3>
-                    <h3>DAsP</h3>
-                  </ul>  
-                </div>
-            </section>
-            <section>
-                <h2>~$ Archiving</h2>
-                <p>학력 정보를 여기에 입력하세요.</p>
-            </section>
-        </main>
+      <header>
+        <h1 id="dynamic-animation"></h1>
+        <h1 id="connection-status"></h1>
+        <div id="ascii-image">
+          <canvas id="canvas"></canvas>
+        </div>
+        <h1>김종현@Full-Stack-Developer</h1>
+        <h2 id="dynamic-text">$ _</h2>
+      </header>
+      <main>
+        <section id="about">
+          <h2>~$ About Me</h2>
+          <div class="about-category ">
+            <h3>이름: 김종현</h3>
+          </div>
+        </section>
+        <section id="skills">
+          <h2>~$ Skill</h2>
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <ul>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <p>아직!!</p>
+          </div>
+          <div class="skill-category">
+            <h3>Database</h3>
+            <ul>
+              <li>
+                <a href="https://www.youtube.com/watch?v=nZRIhJfFjNk&list=PLZwFtgKc35I8OoMuIHY5dYKORoYpGnyjW"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg"
+                /></a>
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original-wordmark.svg"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Deployment</h3>
+            <ul>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Monitoring</h3>
+            <ul>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original.svg"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original-wordmark.svg"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original-wordmark.svg"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>OS</h3>
+            <ul>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original-wordmark.svg"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redhat/redhat-original-wordmark.svg"
+                />
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section id="certifications">
+          <h2>~$ Certification</h2>
+          <div class="certification-category">
+                <h3>리눅스 마스터 2 급</h3>
+          </div>
+          <div class="certification-category">
+                <h3>DAsP</h3>
+          </div>
+          <div class="certification-category">
+                <h3>SQLD</h3>
+          </div>
+        </section>
+        <section id="archiving">
+          <h2>~$ Archiving</h2>
+          <div class="archiving-category">
+            <h3>Git Hub</h3>
+            <ul>
+              <li>
+              <a href="https://github.com/raco1001"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" /></a>
+              <p>raco1001</p>
+              <p>데브코스, 사이드 프로젝트 활동 내역 입니다.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="archiving-category">
+            <h3>Notion</h3>
+            <ul>
+              <li>
+                <a href="https://www.notion.so/6-182ad61f7b35808785a3e1c7cba2f86f?pvs=4"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg" /></a>
+                <p>스터디 및 지식 공유 목적의 노션 페이지 입니다.</p>
+              </li>          
+            </ul>
+          </div>
+        </section>
+      </main>
     </div>
     <script src="ascii.js"></script>
-</body>
+  </body>
 </html>
